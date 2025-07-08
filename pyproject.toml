@@ -1,0 +1,38 @@
+[project]
+name = "uv-ruff-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.116.0",
+    "gunicorn==19.9.0",
+    "httptools>=0.6.4",
+    "matplotlib>=3.10.3",
+    "numpy>=2.3.1",
+    "pandas>=2.3.1",
+    "scikit-learn>=1.7.0",
+    "scipy>=1.16.0",
+    "uvicorn>=0.35.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.2",
+]
+[tool.ruff.lint]
+extend-select = ["E","W","ANN","FAST","ASYNC","S","BLE","COM","EM","N","DOC","RUF"]
+ignore = ["COM812","W191"]
+preview = true
+
+[tool.ruff.lint.pep8-naming]
+extend-ignore-names = ["callMethod"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "tab"
+docstring-code-format = true
+preview = true
