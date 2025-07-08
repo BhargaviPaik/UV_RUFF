@@ -21,8 +21,8 @@ dev = [
     "ruff>=0.12.2",
 ]
 [tool.ruff.lint]
-extend-select = ["E","W","ANN","FAST","ASYNC","S","BLE","COM","EM","N","DOC","RUF"]
-ignore = ["COM812","W191"]
+extend-select = ["E","D","W","ANN","FAST","ASYNC","S","BLE","COM","EM","N","DOC","RUF"]
+ignore = ["COM812","W191","D206","D103"]
 preview = true
 
 [tool.ruff.lint.pep8-naming]

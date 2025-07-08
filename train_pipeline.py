@@ -14,6 +14,7 @@ def load_data(filepath: str) -> pd.DataFrame:
 
 	Returns:
 		pd.DataFrame: _description_
+
 	"""
 	return pd.read_csv(filepath)
 
@@ -23,8 +24,8 @@ def explore_data(df: pd.DataFrame) -> None:
 
 	Args:
 		df (pd.DataFrame): _description_
-	"""
 
+	"""
 	print('First 5 rows of the dataset:')
 	print(df.head())
 	print('Dataset Info:')
@@ -41,6 +42,7 @@ def preprocess_data(df: pd.DataFrame) -> pd.DataFrame:
 
 	Returns:
 		pd.DataFrame: _description_
+
 	"""
 	x = df.iloc[:, :-1]
 	y = df.iloc[:, -1]
@@ -56,8 +58,8 @@ def train_model(x: pd.DataFrame, y: pd.DataFrame) -> pd.DataFrame:
 
 	Returns:
 		pd.DataFrame: _description_
-	"""
 
+	"""
 	x_train, x_test, y_train, y_test = train_test_split(
 		x,
 		y,
